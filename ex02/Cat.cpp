@@ -47,3 +47,7 @@ void Cat::think (int i) {
 	}
 	std::cout << _getBrain()->getIdea(i) << std::endl;
 }
+
+void Cat::memorize(std::string idea) {
+	_getBrain()->setIdeas(idea);
+}

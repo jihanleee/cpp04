@@ -16,7 +16,7 @@ class Cat : public Animal{
 		Cat & operator = (const Cat &a);
 		void makeSound(void) const;
 		void think(int i);
-		void memorize(int i, std::string idea);
+		void memorize(std::string idea);
 };
 
 #endif

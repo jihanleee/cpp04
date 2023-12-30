@@ -20,6 +20,7 @@ int main()
 		else
 			manyAnimals[i] = new Cat();
 	}
+	std::cout << "------------dog deep copy test----------\n";
 	static_cast<Dog *>(manyAnimals[3])->think(4);
 	static_cast<Dog *>(manyAnimals[4])->think(4);
 	static_cast<Dog *>(manyAnimals[3])->memorize("bowwow");
@@ -29,6 +30,19 @@ int main()
 
 	Dog a = *static_cast<Dog *>(manyAnimals[4]);
 	a.think(4);
+	std::cout << "----------------------------------------\n";
+
+	std::cout << "--------------cat deep copy test---------\n";
+	static_cast<Cat *>(manyAnimals[53])->think(4);
+	static_cast<Cat *>(manyAnimals[54])->think(4);
+	static_cast<Cat *>(manyAnimals[53])->memorize("meowmeow");
+	static_cast<Cat *>(manyAnimals[53])->think(4);
+	*(static_cast<Cat *>(manyAnimals[54])) =  *static_cast<Cat *>(manyAnimals[53]);
+	static_cast<Cat *>(manyAnimals[54])->think(4);
+
+	Cat b(*static_cast<Cat *>(manyAnimals[4]));
+	b.think(4);
+	std::cout << "----------------------------------------\n";
 	delete dogo;
 	delete cato;
 	for (int i = 0; i < 100; i++)

@@ -11,7 +11,7 @@ Dog::~Dog() {
 	std::cout << "Dog Destructor called\n";
 }
 
-Dog::Dog(Dog &a):Animal(){
+Dog::Dog(const Dog &a):Animal(){
 	std::cout << "Copy constructor called\n";
 	_type = a._type;
 }

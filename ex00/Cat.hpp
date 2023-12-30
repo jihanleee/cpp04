@@ -7,7 +7,7 @@
 class Cat : public Animal{
 	public:
 		Cat();
-		Cat(Cat &a);
+		Cat(const Cat &a);
 		~Cat();
 		Cat & operator = (const Cat &a);
 		void makeSound(void) const;

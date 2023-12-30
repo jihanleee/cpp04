@@ -4,6 +4,7 @@
 
 Animal::Animal() {
 	std::cout << "Animal Default constructor called\n";
+	_type = "base class";
 }
 
 Animal::~Animal() {

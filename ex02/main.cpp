@@ -5,6 +5,7 @@
 
 int main()
 {
+	//const Animal* meta = new Animal();
 	const Animal* dogo = new Dog();
 	const Animal* cato = new Cat();
 	Animal** manyAnimals = new Animal*[100];

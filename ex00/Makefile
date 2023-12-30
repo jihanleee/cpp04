@@ -4,7 +4,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 CC = c++
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
 
 $(NAME) : $(SRCS)
 	$(CC) $(FLAGS) $(SRCS) -o $(NAME)
